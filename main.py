@@ -164,8 +164,8 @@ class Main(Frame):
             self.formula = self.formula.replace('π', 'float(mathgeometry.pi())')
             self.formula = self.formula.replace('sin(', 'mathgeometry.sin("' + self.deg_or_rad+'",')
             self.formula = self.formula.replace('cos(', 'mathgeometry.cos("' + self.deg_or_rad+'",')
+            self.formula = self.formula.replace('ctg(', 'mathgeometry.cotan("' + self.deg_or_rad+'",')
             self.formula = self.formula.replace('tg(', 'mathgeometry.tan("' + self.deg_or_rad+'",')
-            self.formula = self.formula.replace('ctg(', 'mathgeometry.cotan("'+ self.deg_or_rad+'",')
             self.formula = self.formula.replace('fact', 'mathgeometry.fact')
             self.formula = self.formula.replace('√', 'math.sqrt')
             try:
@@ -192,8 +192,8 @@ class Main(Frame):
             preload_text = preload_text.replace('π', 'float(mathgeometry.pi())')
             preload_text = preload_text.replace('sin(', 'mathgeometry.sin("' + self.deg_or_rad+'",')
             preload_text = preload_text.replace('cos(', 'mathgeometry.cos("' + self.deg_or_rad+'",')
-            preload_text = preload_text.replace('tg(', 'mathgeometry.tan("' + self.deg_or_rad+'",')
             preload_text = preload_text.replace('ctg(', 'mathgeometry.cotan("' + self.deg_or_rad+'",')
+            preload_text = preload_text.replace('tg(', 'mathgeometry.tan("' + self.deg_or_rad+'",')
             preload_text = preload_text.replace('fact', 'mathgeometry.fact')
             preload_text = preload_text.replace('√', 'math.sqrt')
             try:
@@ -210,3 +210,4 @@ if __name__ == '__main__':
     app = Main(root)
     app.pack()
     root.mainloop()
+
